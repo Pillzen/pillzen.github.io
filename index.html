@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEN n DEN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        *{
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+        .bg-body-tertiary{
+            background-color: #F8F8F8 !important;
+        }
+        .navbar-nav .nav-item .nav-link {
+            position: relative;
+            padding-bottom: 10px;
+            color: black;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover,
+        .navbar-nav .nav-item .nav-link.active {
+            color: green;
+        }
+        .navbar-nav .nav-item .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            font-size: larger;
+            height: 2px;
+            background: green;
+            transition: width .3s;
+            position: absolute;
+            bottom: 8px;
+            left: 9px;
+            
+        }
+        .navbar-nav .nav-item .nav-link:hover::after,
+        .navbar-nav .nav-item .nav-link.active::after {
+            width: 87%;
+            background: green;
+        }
+
+       
+
+        .about-us{
+            background-image: url('./images/den_img2.png');
+            background-size: cover;
+            height: 774px;
+            width: 1646px;
+        }
+
+        .aboutus {
+            font-size: 49.9px;
+        }
+
+
+        .abt-para{
+            display: inline-block;
+            margin-top: 7em;
+            
+        }
+
+        .abt-points{
+            list-style-type: disc; 
+            font-size: larger;
+            font-weight: bold;
+            
+        }
+        
+        .abt-points li {
+            margin-bottom: 21px; 
+        }
+
+
+.content h3 {
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #F8F8F8;
+   
+}
+
+.contact-heading {
+    font-size: 49.9px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    
+    
+}
+
+.contact-heading::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: green;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 2.3s ease;
+}
+
+.contact-heading:hover::after {
+    width: 100%;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease;
+    border-radius: 8px; 
+    background-color: #ffffff; 
+    overflow: hidden; 
+    position: relative; 
+}
+
+.card:hover {
+    transform: scale(1) translateY(-8px) rotate(0deg); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    background-color: rgb(238, 238, 238); 
+}
+
+.card1:hover {
+    transform: scale(1) translateY(-8px) rotate(0deg); 
+    box-shadow: 0 140px 24px rgba(0, 0, 0, 0.3);
+    background-color: rgb(238, 238, 238); 
+}
+
+.card-body {
+    padding: 20px;
+}
+
+
+
+
+/* Reveal on Scroll Styles */
+.reveal-text {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-text.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+        a:hover {
+        text-decoration: none;
+          }
+
+          a {
+            text-decoration: none;
+            color: white;
+          }
+
+        .copy1 {
+            font-size: smaller;
+        }  
+
+        .copy2 {
+            font-size: medium;
+        }
+
+       
+   footer a:hover {
+    color: #a4a4a5;
+   }
+
+   .join {
+    font-size: 28px; 
+   }
+
+   .tran {
+    font-size: x-large;
+    color: black;
+   }
+
+   .quote-container {
+    position: relative;
+    width: 102%;
+}
+
+.quote-text {
+    position: absolute;
+    top: 38%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-84%, -50%); /* Center the text */
+    color: white; /* Optional: ensures text is visible over the image */
+    text-align: center;
+}
+
+.heading {
+    font-size: 37px;
+    font-weight: 900;
+    font-family: "Times New Roman", serif;
+    margin: 0;
+}
+
+.author {
+    font-family: "Times New Roman", serif;
+    font-size: x-large;
+    margin: 0;
+}
+
+   
+        @media screen and (max-width: 768px){
+            .custom-navbar{
+                background-color: #F8F8F8 !important;
+            }
+            .about-us{
+                background-image: url('./images/den_img2.png');
+                background-size: cover;
+                height: 600px;
+                margin-top: -3.7em;
+            }
+
+            .landing {
+            background-image: url('./images/den_img1.jpg');
+            background-size: cover;
+            height: 370px;
+            width: 1646px;
+        }
+
+            
+            .abt-para{
+                display: inline-block;
+                margin-top: 4em;
+              
+               
+            }
+            .navbar-nav .nav-item .nav-link::after {
+                content: '';
+                display: block;
+                width: 0;
+                font-size: 20px;
+                height: 2px;
+                background: green;
+                transition: width .3s;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+
+            .abt-points{
+                font-size:14px;
+                font-weight:bold;
+            }
+
+            
+    .footer {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .footer a {
+      color: #fff;
+      margin: 0 10px;
+    }
+   .footer a:hover {
+     
+      color: #a4a4a5;
+    }
+    .footer .row div {
+      margin-bottom: 20px;
+    }
+
+    .join {
+        font-size: medium;
+    }
+
+    a:hover {
+        text-decoration: none;
+    
+    }
+
+    .copy1 {
+            font-size:x-small;
+        }  
+
+    .copy2 {
+            font-size: small;
+            
+        }
+
+        .tran {
+            font-size: medium;
+           margin-bottom: 10%;
+           
+           
+    
+        }
+
+        .horizontal-line {
+            width: 88.6%; 
+            height: 3.6px; 
+            background-color: #17F604;
+            margin-top: -11.2px;
+            overflow: hidden;
+            overflow-y: hidden;
+        }
+
+    .horizontal-line1 {
+        width: 39.1%; 
+        height: 3.6px; 
+        background-color: #17F604;
+        margin-top: -10.3px;
+        overflow: hidden;
+        overflow-y: hidden;
+    }
+
+    *, *::before, *::after {
+       box-sizing: border-box;
+   }
+
+
+.aboutus {
+    font-size: 34.9px;
+    overflow-y:hidden ;
+    white-space: nowrap;
+              
+    }
+
+
+    .contact-heading {
+    font-size: 37.9px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    overflow-y:hidden ;
+    white-space: nowrap;
+    
+}
+
+.product-services {
+    text-align: center;
+    font-size: 30.9px; /* Adjusted for better responsiveness */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-services::after {
+    width: 60%;
+}
+
+.content:hover .overlay-text {
+    font-size: 14px;
+    width: 80%; 
+}
+
+.quote-text {
+        top: 50%; 
+        transform: translate(-75%, -50%);
+        padding: 0 10px; 
+    }
+
+    .heading {
+        font-size: small; 
+    }
+
+    .author {
+        font-size:x-small; 
+    }
+
+
+}
+
+
+
+@media screen and (min-width: 769px){
+
+   .content {
+    width: 86%;
+   }
+
+}
+
+    
+          
+        
+    </style>
+    <header class="bg-body-tertiary fixed-top">
+        <div class="row mw-100">
+            <div class="col-lg-5 col-4 p-0 mt-1 px-lg-3">
+                <a href="index.html"><img src="./images/Den_logo.png" alt="Logo" class="img-fluid" style="height: 110px; width: 130px;"></a>
+            </div>
+            <div class="col-lg-7 col-8 d-flex align-items-center justify-content-end ml-auto">
+                <nav class="navbar navbar-expand-lg navbar-light text-black d-flex align-items-center justify-content-between w-100">
+                    <button class="navbar-toggler ml-auto mt-1" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: rgba(171, 171, 171, 0.394);">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse custhead" id="navbarNav">
+                        <ul class="navbar-nav ml-auto" style="font-weight: 900; font-size: larger;">
+                            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about1">About us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#product1">Product & Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact1">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    
+
+    <section class="img-hero">
+        <div class="quote-container">
+            <img src="./images/den_img1.jpg" alt="image" class="img-fluid w-100 landing">
+        
+            <div class="quote-text">
+                <p class="heading">"Sustainability is not just about doing less harm.<br> It's about doing more good."</p>
+                <p class="text-right author">- Jochen Zeitz</p>
+            </div>
+        </div>
+        
+        <div class="row my-5 mw-100">
+            <div class="col-12 p-0">
+                <p class=" text-center p-lg-0 pl-3 custhead tran" style=" font-weight: bold;">
+                    Transforming waste into resources, we pave the way for a greener tomorrow. <br> Together, we recycle today for a sustainable future
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-us img-fluid mb-5">
+        <div class="container-fluid abt-para">
+            <h1 class="custhead ml-3 pt-3 mb-lg-0 aboutus" style=" font-weight: 900; color: white;" id="about1">About us</h1>
+        <div class="horizontal-line1 mx-3 "></div>
+
+            <div class="row mt-3 d-block align-content-center">
+                <div class="col-lg-6 col-12 custhead">
+                    <ul class="abt-points ">
+                        <li >
+                            Our team, dedicated to innovative waste management and recycling in central Kerala.
+                        </li>
+                        <li>
+                            Established in June 2021 and proudly certified by the Kerala Startup Mission.
+                        </li>
+                        <li>
+                            We collaborate with small-scale industries, hospitals, and residential complexes to revolutionize waste handling.
+                        </li>
+                        <li>
+                            Our mission is to transform waste into valuable resources, fostering a greener, cleaner environment for future generations.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>    
+    </section>
+
+    <div class="container">
+        <h2 class="product-services mb-lg-5" id="product1">Product & Services</h2>
+        <div class="row mx-lg-5">
+            <div class="col-lg-6 col-md-12 mb-4">
+                <div class="content reveal-text" id="reveal1">
+                    <img src="./images/product.png" alt="Product Image" class="img-fluid">
+                    <p class="overlay-text">At our core, we provide sustainable solutions for waste management and recycling, tackling a wide range of materials including paper, plastic, glass, food, and both biodegradable and non-biodegradable wastes. Utilizing state-of-the-art technologies and machinery, we transform these materials into value-added products or decomposable forms. Our comprehensive approach ensures that waste is not merely disposed of, but repurposed in ways that benefit the environment. One of our key methods is composting, where organic waste is converted into nutrient-rich compost, fostering circular economy.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 mb-4  ">
+                <div class="content reveal-text" id="reveal2">
+                    <img src="./images/service.png" alt="Service Image" class="img-fluid">
+                    <p class="overlay-text">Our operations are powered by advanced, energy-efficient machinery designed to handle different stages of waste processing. We employ cutting-edge equipment such as shredders, crushers, granulators, compactors, rotary shears, extruders, and segregators, all enhanced with IR sensors for precision and efficiency. Additionally, our dispersion machines play a crucial role in breaking down and separating materials. Through these innovative technologies, we ensure optimal recycling and transformation processes, turning waste into valuable resources while minimizing environmental impact.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <section class="contact-us">
+        <div class="contact-container">
+            <h1 class="text-center contact-heading mb-lg-0 mb-3" id="contact1" style="color:#000;">Contact us</h1>
+            <div class="horizontal-line mx-2"></div>
+          </div>
+
+        <div class="row pt-2 pr-0 mw-100">
+            <div class="col-12 p-0 ml-3 mb-5 d-flex align-items-center justify-content-center">
+                <p class="text-center my-lg-4 reveal-text join" style="font-weight: bold; color: #CF8800;">
+                    Join us on our journey towards sustainability <br> & <br>
+                    Discover how we can make a significant impact together
+                </p>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 mb-4 p-0 d-flex align-items-center justify-content-center">
+                    <div class="card card1 reveal-text" style="width: 15rem; height: 15rem;">
+                        <div class="card-body text-center">
+                            <i class="fa-solid fa-headset mt-3" style="font-size: 60px;"></i>
+                            <p class="card-text mt-4">+91 8078228432 <br> <br> +91 8281290634</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 p-0 d-flex align-items-center justify-content-center">
+                    <div class="card card1 reveal-text" style="width: 15rem; height: 15rem;">
+                        <div class="card-body text-center">
+                            <i class="fa-regular fa-envelope mt-3" style="font-size: 60px;"></i>
+                            <p class="card-text mt-4">info@dennden.in</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4  p-0 d-flex align-items-center justify-content-center">
+                    <div class="card card1 reveal-text" style="width: 15rem; height: 15rem; ">
+                        <div class="card-body text-center ">
+                            <i class="fa-solid fa-map-location-dot mt-0" style="font-size: 60px;"></i>
+                            <p class="card-text mt-4" style="font-size: 10px;">DEN N DEN SUSTAINABLE SOLUTIONS PVT. LTD. <br>
+                                Building No XI/ 174 <br>
+                                Kannamthanam Building, <br>
+                                Kooroppada , <br>
+                                Kottayam-686502 <br>
+                                Kerala
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+     <!-- Contact Form -->
+   
+   <div class="container ">
+    <div class="row ">
+      <div class="col-12 d-flex flex-wrap justify-content-around">
+        <div class="card p-4 mb-5 cust-card" style=" margin-top: 37px;">
+          <form id="contact-form"  action="https://formsubmit.co/info@dennden.in" method="POST">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" id="name" name="Name" placeholder="Your Name" required style="background-color: #DDDDDD;">
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" id="email" name="Email" placeholder="Your Email" required style="background-color: #DDDDDD;">
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="subject" name="Subject" placeholder="Subject" required style="background-color: #DDDDDD;">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" id="message" name="Message" rows="5" placeholder="Message" required style="background-color: #DDDDDD;"></textarea>
+            </div>
+            <div class="row">
+              <div class="col-12 d-flex flex-wrap justify-content-around">
+                <button type="submit" class="btn btn-danger btn-block" style="max-width: 143px;">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Footer -->
+   <footer class="footer mw-100 p-0">
+    <div class="container mw-100" style="background-color: black;">
+        <div class="row">
+            <div class="col-md-3 ">
+                <img src="./images/Den_logo.png" alt="Logo" class="ml-auto mr-auto d-flex justify-content-center align-items-center " style="width:230px;height: 200px; margin-top: 4.3rem; margin-bottom: 2px;">
+            </div>
+            <div class="col-md-4 text-center d-block justify-content-center align-items-center " style="margin-left: 1rem; margin-top: 3.7rem; font-size: large;">
+              <ul class="list-unstyled text-white">
+                <li class="mr-md-3 mb-3 "><a href="index.html" class="text-white">HOME</a></li>
+                <li class="mr-md-3 mt-2 mb-3"><a href="#about1" class="text-white">ABOUT US</a></li>
+                <li class="mr-md-3 mt-2 mb-3"><a href="#product1" class="text-white">PRODUCT & SERVICES</a></li>
+                <li class="mr-md-3 mt-2"><a href="#contact1" class="text-white">CONTACT US</a></li>
+              </ul>
+               
+            </div> 
+            <div class="col-md-4 text-center d-block justify-content-center align-items-center">
+                <div class="map-container" style="max-height: 1900px; margin-top: 3rem;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9674.555123783695!2d76.65813055324284!3d9.56652010639203!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0633c062567b49%3A0xc735aac3a3501ac8!2sDen%20N%20Den%20Sustainable%20Solutions%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1722623677122!5m2!1sen!2sin" width="100%" height="200"" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                <p class="text-white" style="font-size: small; margin-top: 1rem;">DEN N DEN SUSTAINABLE SOLUTIONS PVT. LTD.
+                    Building No XI/ 174
+                    Kannamthanam Building,
+                    Kooroppada ,
+                    Kottayam-686502
+                    Kerala</p>  
+            </div>
+        </div>
+        <div class="text-white d-flex justify-content-center align-items-center py-2  ">
+            <p class="copy1">Copyright @2024 | Designed & Developed by:<a href="https://www.instagram.com/pillzen_pvt.ltd._?igsh=ZWZqMXc5YXZjZWxv" target="_blank" class="copy2 ml-0"> Pillzen Pvt. Ltd</a></p></div>
+    </div>
+</footer>
+
+    
+    
+    
+
+
+<script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
